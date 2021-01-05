@@ -1,6 +1,6 @@
 :root {
     /* --original: #425BB5; */
-    --original: rgb(39, 39, 88);
+    --original: rgb(28, 43, 70);
 
     /* todo - make global padding variable? */
     /* todo - make global section background vars? */
@@ -32,7 +32,9 @@
 /* Google fonts & font family
 ==================================================*/
 
+/*
 @import 'https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Playfair+Display:400,400i,700,700i,900,900i';
+*/
 
 /*
 font-family: 'Playfair Display', serif;
@@ -62,8 +64,8 @@ h4 {
 
 h4:before {
     position: absolute;
-    width: 30px;
-    left: -40px;
+    width: 15px;
+    left: -25px;
     content: "";
     display: block;
     height: 2px;
@@ -71,12 +73,16 @@ h4:before {
     top: 9px;
 }
 
+nav li a {
+    font-family: Lato, sans-serif;
+}
+
 
 /* General
 ==================================================*/
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 14px;
     line-height: 24px;
 }
@@ -257,18 +263,19 @@ nav li a {
     text-transform: uppercase;
     letter-spacing: 2px;
     color:white;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: bold;
 }
+
 /* controls language bar position at top right of page */
 nav li.langbar {
     position: absolute; 
-    right: 1em; 
+    right: 1em;
+    display: inline-block;
 }
 
 .bg-nav {
-    background: rgb(175, 175, 175);
-    border-bottom: 1px solid #f3f3f3
+    background: linear-gradient(rgb(228, 228, 228, 0.95), rgb(168, 167, 167, 0.95));
 }
 
 .bg-nav ul {
@@ -301,7 +308,8 @@ a.active {
 
 .table-cell {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
+    padding-top: 25%;
 }
 
 .disply-table {
@@ -476,8 +484,12 @@ footer {
 
 #contact {
     padding: 100px 0;
-    background: #ffffff
+    background: white;
 }
+
+a[href^="mailto"] {color:inherit}
+
+a[href^="mailto"]:hover {color: rgb(39, 39, 88)}
 
 .social {
     padding-left: 0;
@@ -511,6 +523,13 @@ footer {
     }
 }
 
+@media (max-width: 991px) {
+    /* For mobile phones: */
+    table, tr {
+        display:block
+    }
+  }
+
 @media (max-width: 768px) {
     .timeline-event-copy {
         width: 90%;
@@ -519,10 +538,24 @@ footer {
 }
 
 @media (max-width: 570px) {
-    .navbar-fixed-top {
+    .navbar-fixed-top li:not(:last-child) {
         display: none;
     }
+
+    /*
+    .navbar-fixed-top li.langbar {
+        display: block
+    }
+    */
 }
+
+/*
+@media (min-width: 600px) {
+    .navbar-small {
+        display: none
+    }
+}
+*/
 
 @media (max-width: 500px) {
     h1 {
