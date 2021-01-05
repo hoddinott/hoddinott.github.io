@@ -58,6 +58,12 @@ h2 {
     line-height: 50px;
 }
 
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    line-height: 25px;
+}
+
 h4 {
     font-family: 'Noto Sans JP', sans-serif;
     text-transform: capitalize;
@@ -81,6 +87,14 @@ h4:before {
 
 nav li a {
     font-family: Lato, sans-serif;
+}
+
+strong {
+    font-weight: 700;
+}
+
+p {
+    text-align: justify;
 }
 
 

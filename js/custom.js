@@ -22,7 +22,7 @@ $(document).ready(function () {
         var cur_pos = $(this).scrollTop();
 
         sections.each(function () {
-            var top = $(this).offset().top - nav_height - 50,
+            var top = $(this).offset().top - nav_height - 100,
                 bottom = top + $(this).outerHeight();
 
             if (cur_pos >= top && cur_pos <= bottom) {
