@@ -59,7 +59,7 @@ h2 {
 }
 
 h4 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     text-transform: capitalize;
     letter-spacing: 2px;
     position: relative;
@@ -491,6 +491,7 @@ footer {
 #contact {
     padding: 100px 0;
     background: white;
+    
 }
 
 a[href^="mailto"] {color:inherit}
@@ -543,25 +544,10 @@ a[href^="mailto"]:hover {color: rgb(39, 39, 88)}
     }
 }
 
-@media (max-width: 570px) {
+@media (max-width: 700px) {
     .navbar-fixed-top li:not(:last-child) {
         display: none;
     }
-
-    /*
-    .navbar-fixed-top li.langbar {
-        display: block
-    }
-    */
-}
-
-/*
-@media (min-width: 600px) {
-    .navbar-small {
-        display: none
-    }
-}
-*/
 
 @media (max-width: 500px) {
     h1 {
