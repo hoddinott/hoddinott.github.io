@@ -52,6 +52,12 @@ h1 {
     line-height: 70px;
 }
 
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    line-height: 50px;
+}
+
 h4 {
     font-family: 'Lato', sans-serif;
     text-transform: capitalize;
