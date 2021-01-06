@@ -1,6 +1,7 @@
 :root {
-    /* --original: #425BB5; */
-    --original: rgb(28, 43, 70);
+    /* --maintextcolor: #425BB5; */
+    --maintextcolor: rgb(28, 43, 70);
+    --hovercolor: rgb(142, 142, 161)
 
     /* todo - make global padding variable? */
     /* todo - make global section background vars? */
@@ -69,7 +70,7 @@ h4 {
     text-transform: capitalize;
     letter-spacing: 2px;
     position: relative;
-    color: var(--original);
+    color: var(--maintextcolor);
     margin-left: 40px;
     font-weight: 700;
 }
@@ -81,7 +82,7 @@ h4:before {
     content: "";
     display: block;
     height: 2px;
-    background: var(--original);
+    background: var(--maintextcolor);
     top: 9px;
 }
 
@@ -162,7 +163,7 @@ body {
     width: 100%;
     -webkit-animation: rotation 1s linear infinite;
     animation: rotation 1s linear infinite;
-    border: 2px solid var(--original);
+    border: 2px solid var(--maintextcolor);
     border-top: 2px solid transparent;
     border-radius: 100%
 }
@@ -308,12 +309,12 @@ a:focus {
 }
 
 a:hover {
-    color: var(--original);
+    color: var(--maintextcolor);
     text-decoration: none;
 }
 
 a.active {
-    color: var(--original);
+    color: var(--maintextcolor);
 }
 
 
@@ -366,7 +367,7 @@ a.active {
     font-family: 'Lato', sans-serif;
     text-transform: capitalize;
     letter-spacing: 2px;
-    color: var(--original);
+    color: var(--maintextcolor);
     font-size: 16px;
     font-weight: bold
 }
@@ -406,11 +407,11 @@ a.active {
 .timeline-event:hover .timeline-event-icon {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    background-color: var(--original);
+    background-color: var(--maintextcolor);
 }
 
 .timeline-event:hover .timeline-event-thumbnail {
-    box-shadow: inset 40em 0 0 0 var(--original);
+    box-shadow: inset 40em 0 0 0 var(--maintextcolor);
 }
 
 .timeline-event-copy {
@@ -445,7 +446,7 @@ a.active {
     transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
-    background-color: var(--original);
+    background-color: var(--maintextcolor);
     outline: 10px solid #f3f3f3;
     display: block;
     margin: 0.5em 0.5em 0.5em -0.5em;
@@ -467,17 +468,17 @@ a.active {
     font-size: 12px;
     font-weight: bold;
     background-color: black;
-    box-shadow: inset 0 0 0 0em var(--original);
+    box-shadow: inset 0 0 0 0em var(--maintextcolor);
     display: inline-block;
     margin-bottom: 1.2em;
     padding: 0.25em 1em 0.2em 1em;
 }
 
 
-/* portfolio section
+/* expertise section
 ==================================================*/
 
-#portfolio {
+#expertise {
     padding: 100px 0;
     background: #ffffff
 }
@@ -498,13 +499,57 @@ a.active {
     background: #f3f3f3
 }
 
+/* blog section
+==================================================*/
+#blog {
+    padding: 100px 0;
+    background: white
+}
+
+/* overrides embedded javascript design  */
+.blog-post a{
+color: var(--maintextcolor)
+}
+
+.blog-post a:hover {
+    color: var(--hovercolor)
+}
+
+div.post-date{
+    display:none
+}
+
+a.btn.btn-primary{
+    display:none
+}
+
+div.author, p.post-author{
+    display:none
+}
+
+a.btn.btn-primary.pager.older{
+    background-color: #f3f3f3;
+    border:none;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+a.btn.btn-primary.pager.newer{
+    background-color: #f3f3f3;
+    border:none;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+
 /* footer
 ==================================================*/
 
 footer {
+    background: #f3f3f3;
     text-align: center;
     padding: 3px;
-    color: var(--original);
+    color: var(--maintextcolor);
   }
 
 /* contact
@@ -512,13 +557,13 @@ footer {
 
 #contact {
     padding: 100px 0;
-    background: white;
+    background: #f3f3f3;
     
 }
 
-a[href^="mailto"] {color:inherit}
+a[href^="mailto"] {color:var(--maintextcolor)}
 
-a[href^="mailto"]:hover {color: rgb(39, 39, 88)}
+a[href^="mailto"]:hover {color: var(--hovercolor)}
 
 .social {
     list-style: none;
@@ -542,7 +587,7 @@ a[href^="mailto"]:hover {color: rgb(39, 39, 88)}
 }
 
 .social li a:hover {
-    color: var(--original);
+    color: var(--maintextcolor);
 }
 
 
@@ -569,7 +614,7 @@ a[href^="mailto"]:hover {color: rgb(39, 39, 88)}
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 991px) {
     .navbar-fixed-top li:not(:last-child) {
         display: none;
     }
