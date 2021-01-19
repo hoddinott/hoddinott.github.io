@@ -311,6 +311,8 @@ a:focus {
 a:hover {
     color: var(--maintextcolor);
     text-decoration: none;
+    transition: all .2s;
+    -webkit-transition: all .2s;
 }
 
 a.active {
@@ -552,6 +554,17 @@ footer {
     color: var(--maintextcolor);
   }
 
+#legal-notices { 
+    cursor: pointer;
+    color:var(--maintextcolor);
+    }
+
+#legal-notices:hover {
+        color: var(--hovercolor);
+        transition: all .2s;
+    -webkit-transition: all .2s;
+    }
+
 /* contact
 ==================================================*/
 
@@ -563,7 +576,11 @@ footer {
 
 a[href^="mailto"] {color:var(--maintextcolor)}
 
-a[href^="mailto"]:hover {color: var(--hovercolor)}
+a[href^="mailto"]:hover {
+    color: var(--hovercolor);
+    transition: all .2s;
+    -webkit-transition: all .2s;
+}
 
 .social {
     list-style: none;
@@ -579,15 +596,15 @@ a[href^="mailto"]:hover {color: var(--hovercolor)}
 }
 
 .social li a {
-    color: #333;
+    color: var(--maintextcolor);
     font-size: 35px;
     margin-right: 15px;
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all .2s;
+    -webkit-transition: all .2s;
 }
 
 .social li a:hover {
-    color: var(--maintextcolor);
+    color: var(--hovercolor);
 }
 
 

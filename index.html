@@ -5,10 +5,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="google-site-verification" content="J-e313IrVmQSww62bFIMsAEOjCqovlp6JYQGa0pdhog" />
-  <meta name="description" content="English mother-tongue translator based in Milan for the
-  financial, legal, advertising and IT sectors." />
-  <title>Simon Hoddinott English Mother-Tongue Translator</title>
+  <meta name="google-site-verification" content="J-e313IrVmQSww62bFIMsAEOjCqovlp6JYQGa0pdhog"/>
+  <meta name="description" content="Native English translator based in Milan for financial, legal, advertising and IT texts." />
+  <title>Simon Hoddinott Native English Translator</title>
   <link rel="icon" href="img/favicon.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Playfair+Display&display=swap"
@@ -48,7 +47,7 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#expertise">Expertise</a></li>
           <li><a href="#qualifications">Qualifications</a></li>
-          <li><a href="#blog">blog</a></li>
+          <li><a href="#blog">Blog</a></li>
           <li><a href="#contact">Contact</a></li>
 
           <li class="langbar">
@@ -125,8 +124,7 @@
           press releases, brochures, product information, catalogues, presentations, emails, slogans),
           <strong>legal</strong>
           (contracts, certificates, corporate law, civil law) as well as <strong>information technology</strong>
-          (localisation, databases, digitalisation, web technologies). I currently do not provide certified
-          translations.
+          (localisation, databases, digitalisation, web technologies).
           I can provide translations in British, American or international English: just let me know which you prefer!
           <br>
           <br>
@@ -379,9 +377,9 @@
       |
 
       <!-- modal trigger -->
-      <span data-toggle="modal" data-target="#privacyModal">
+      <a data-toggle="modal" data-target="#privacyModal" id="legal-notices">
         Legal notices
-      </span>
+      </a>
 
       <!-- Modal -->
       <div class="modal fade" id="privacyModal" tabindex="-1" role="dialog" aria-labelledby="privacyModalLabel"
@@ -418,7 +416,7 @@
         </div>
       </div>
 
-      
+
       | Layout Credit: Ahmed Essa
     </div>
   </footer>
@@ -438,20 +436,21 @@
   <!--  medium blog script -->
   <script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
   <!-- URL language changer script -->
+  <!-- changes language according to user-selected browser language, not IP address -->
   <script type="text/javascript">
-    $( document ).ready(function(){
-    var userLang = navigator.language || navigator.userLanguage;
-    if(userLang == "it"){
-       window.location.href = "https://hoddinott.github.io/it"
-    }
-    else if(userLang == "de"){
-       window.location.href = "https://hoddinott.github.io/de"
-    }
-});
-   </script>
-
-
-
+    $(document).ready(function () {
+      var userLang = navigator.language || navigator.userLanguage;
+      if (userLang == "en") {
+        window.location.href = "https://hoddinott.github.io"
+      }
+      else if (userLang == "it") {
+        window.location.href = "https://hoddinott.github.io/it"
+      }
+      else if (userLang == "de") {
+        window.location.href = "https://hoddinott.github.io/de"
+      }
+    });
+  </script>
 
 </body>
 
