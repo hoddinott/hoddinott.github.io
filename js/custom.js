@@ -4,8 +4,8 @@ $(window).load(function () {
     "use strict";
     // makes sure the whole site is loaded
     $('#status').fadeOut(); // will first fade out the loading animation
-    $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-    $('body').delay(350).css({
+    $('#preloader').delay(250).fadeOut('slow'); // will fade out the white DIV that covers the website.
+    $('body').delay(250).css({
         'overflow': 'visible'
     });
 })
@@ -60,6 +60,28 @@ $(document).ready(function () {
             $(".navbar-fixed-top").removeClass("bg-nav");
         }
     });
+
+
+    // makes menu disappear when scrolling down and reappear when scrolling up
+    // after 700 px (height of main image)
+var mywindow = $(window);
+var mypos = mywindow.scrollTop();
+var up = false;
+var newscroll;
+mywindow.scroll(function () {
+    newscroll = mywindow.scrollTop();
+    if ($(window).scrollTop() > 700){
+    if (newscroll > mypos && !up) {
+        $('.navbar-fixed-top').stop().fadeOut(150);
+        up = !up;
+        console.log(up);
+    } else if(newscroll < mypos && up) {
+        $('.navbar-fixed-top').stop().fadeIn(150);
+        up = !up;
+    }
+    mypos = newscroll;
+}
+});
 
 
 

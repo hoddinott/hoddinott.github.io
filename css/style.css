@@ -295,6 +295,10 @@ nav li.langbar {
     display: inline-block;
 }
 
+.langbar{
+    color: white;
+} 
+
 .bg-nav {
     background: linear-gradient(rgb(228, 228, 228, 0.95), rgb(168, 167, 167, 0.95));
 }
@@ -327,6 +331,14 @@ a.active {
     background: url(../img/home-bg.jpeg);
     background-size: cover;
     height: 100vh;
+}
+
+#home h1 {
+    color: white;
+}
+
+#home h2 {
+    color: white;
 }
 
 .table-cell {
@@ -518,8 +530,12 @@ color: var(--maintextcolor)
     color: var(--hovercolor)
 }
 
+#blog em{
+    font-size: 14px
+}
+
 /* blocks title where URL contains text in quotes */
-a[href*="schicksalsbrunnen"] h2 {
+#blog a[href*="schicksalsbrunnen"] h2 {
     display:none
 }
 
@@ -535,14 +551,14 @@ div.author, p.post-author{
     display:none
 }
 
-a.btn.btn-primary.pager.older{
+#blog a.btn.btn-primary.pager.older{
     background-color: #f3f3f3;
     border:none;
     border-radius: 6px;
     padding: 10px;
 }
 
-a.btn.btn-primary.pager.newer{
+#blog a.btn.btn-primary.pager.newer{
     background-color: #f3f3f3;
     border:none;
     border-radius: 6px;
