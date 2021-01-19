@@ -464,6 +464,7 @@ a.active {
     -o-transition: box-shadow 0.5s ease-in 0.1s;
     -webkit-transition: box-shadow 0.5s ease-in;
     -webkit-transition-delay: 0.1s;
+    transition-delay: inherit;
     -webkit-transition: box-shadow 0.5s ease-in 0.1s;
     transition: box-shadow 0.5s ease-in 0.1s;
     color: white;
@@ -517,6 +518,11 @@ color: var(--maintextcolor)
     color: var(--hovercolor)
 }
 
+/* blocks title where URL contains text in quotes */
+a[href*="schicksalsbrunnen"] h2 {
+    display:none
+}
+
 div.post-date{
     display:none
 }
@@ -554,12 +560,12 @@ footer {
     color: var(--maintextcolor);
   }
 
-#legal-notices { 
+.link { 
     cursor: pointer;
     color:var(--maintextcolor);
     }
 
-#legal-notices:hover {
+.link:hover {
         color: var(--hovercolor);
         transition: all .2s;
     -webkit-transition: all .2s;
@@ -666,4 +672,5 @@ a[href^="mailto"]:hover {
         display: table;
         height: 30vh;
     }
+}
 }
