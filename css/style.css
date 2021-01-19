@@ -657,6 +657,15 @@ a[href^="mailto"]:hover {
     .navbar-fixed-top li:not(:last-child) {
         display: none;
     }
+}
+
+@media (max-width: 991px) {
+    #retainable-rss-embed {
+        data-maxcols: 1;
+    }
+}
+
+
 
 @media (max-width: 500px) {
     h1 {
