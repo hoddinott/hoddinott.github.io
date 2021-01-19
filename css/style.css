@@ -539,6 +539,10 @@ color: var(--maintextcolor)
     display:none
 }
 
+#blog .excerpt{
+    display:none
+}
+
 div.post-date{
     display:none
 }
