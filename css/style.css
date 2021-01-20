@@ -547,6 +547,17 @@ color: var(--maintextcolor)
     display:none
 }
 
+/* replaces button "See all posts" with "Back */
+#blog a[href="#"]{
+    font-size: 0px
+}
+
+#blog a[href="#"]:after{
+    font-size: 14px;
+	content:'Back';
+}
+
+
 #blog .excerpt{
     display:none
 }
