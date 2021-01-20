@@ -10,21 +10,9 @@ $(window).load(function () {
     });
 })
 
-$(document).ready(function () {
-    "use strict";
 
-    $(document).ready(function () {
-        var userLang = navigator.language || navigator.userLanguage;
-        if (userLang == "en") {
-          window.location.href = "https://hoddinott.github.io"
-        }
-        else if (userLang == "it") {
-          window.location.href = "https://hoddinott.github.io/it"
-        }
-        else if (userLang == "de") {
-          window.location.href = "https://hoddinott.github.io/de"
-        }
-      });
+$(document).ready(function () {
+    "use strict";      
 
     // scroll menu
     var sections = $('.section'),
@@ -77,24 +65,24 @@ $(document).ready(function () {
 
     // makes menu disappear when scrolling down and reappear when scrolling up
     // after 700 px (height of main image)
-var mywindow = $(window);
-var mypos = mywindow.scrollTop();
-var up = false;
-var newscroll;
-mywindow.scroll(function () {
-    newscroll = mywindow.scrollTop();
-    if ($(window).scrollTop() > 700){
-    if (newscroll > mypos && !up) {
-        $('.navbar-fixed-top').stop().fadeOut(150);
-        up = !up;
-        console.log(up);
-    } else if(newscroll < mypos && up) {
-        $('.navbar-fixed-top').stop().fadeIn(150);
-        up = !up;
-    }
-    mypos = newscroll;
-}
-});
+    var mywindow = $(window);
+    var mypos = mywindow.scrollTop();
+    var up = false;
+    var newscroll;
+    mywindow.scroll(function () {
+        newscroll = mywindow.scrollTop();
+        if ($(window).scrollTop() > 700) {
+            if (newscroll > mypos && !up) {
+                $('.navbar-fixed-top').stop().fadeOut(150);
+                up = !up;
+                console.log(up);
+            } else if (newscroll < mypos && up) {
+                $('.navbar-fixed-top').stop().fadeIn(150);
+                up = !up;
+            }
+            mypos = newscroll;
+        }
+    });
 
 
 
@@ -137,65 +125,5 @@ mywindow.scroll(function () {
         });
 
     });
-
-    //animatedModal
-    // $("#demo01,#demo02,#demo03,#demo04,#demo05,#demo06,#demo07,#demo08,#demo09").animatedModal();
-    //$("#demo02").animatedModal();
-
-    // Contact Form 	
-
-    // validate contact form
-    $(function () {
-        $('#contact-form').validate({
-            rules: {
-                name: {
-                    required: true,
-                    minlength: 2
-                },
-                email: {
-                    required: true
-                },
-                phone: {
-                    required: false
-                },
-                message: {
-                    required: true
-                }
-
-            },
-            messages: {
-                name: {
-                    required: "This field is required",
-                    minlength: "your name must consist of at least 2 characters"
-                },
-                email: {
-                    required: "This field is required"
-                },
-                message: {
-                    required: "This field is required"
-                }
-            },
-            submitHandler: function (form) {
-                $(form).ajaxSubmit({
-                    type: "POST",
-                    data: $(form).serialize(),
-                    url: "process.php",
-                    success: function () {
-                        $('#contact :input').attr('disabled', 'disabled');
-                        $('#contact').fadeTo("slow", 1, function () {
-                            $(this).find(':input').attr('disabled', 'disabled');
-                            $(this).find('label').css('cursor', 'default');
-                            $('#success').fadeIn();
-                        });
-                    },
-                    error: function () {
-                        $('#contact').fadeTo("slow", 1, function () {
-                            $('#error').fadeIn();
-                        });
-                    }
-                });
-            }
-        });
-
-    });
+  
 });
