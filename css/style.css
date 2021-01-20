@@ -263,10 +263,11 @@ header {
     -webkit-transition: all .5s;
     transition: all .5s;
     height: 65px;
+    
 }
 
 nav ul {
-    display: inline-block;
+    display: inline-flex;
     padding-left: 0;
     list-style: none;
     padding: 20px;
@@ -276,7 +277,7 @@ nav ul {
 }
 
 nav li {
-    display: inline-block;
+    display: inline-flex;
     margin: 10px;
 }
 
@@ -292,12 +293,19 @@ nav li a {
 nav li.langbar {
     position: absolute; 
     right: 1em;
-    display: inline-block;
+    display: inline-flex;
 }
 
 .langbar{
     color: white;
 } 
+
+li span{
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline;
+    line-height: 1.5;
+}
 
 .bg-nav {
     background: linear-gradient(rgb(228, 228, 228, 0.95), rgb(168, 167, 167, 0.95));
