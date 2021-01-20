@@ -70,7 +70,8 @@
         }
 
         .notfound .notfound-404 h1>span {
-            text-shadow: -8px 0px 0px ##f3f3f3;
+            text-shadow: -8px 0px 0px #f3f3f3;
+            
         }
 
         .notfound .notfound-404 h3 {
@@ -89,7 +90,6 @@
             font-family: 'Cabin', sans-serif;
             font-size: 20px;
             font-weight: 400;
-            text-transform: uppercase;
             color: #000;
             margin-top: 0px;
             margin-bottom: 25px;
@@ -105,9 +105,15 @@
             }
         }
 
+        @media only screen and (max-width: 571px){
+            .notfound h3{
+                bottom: 25px;
+            }
+        }
+
         @media only screen and (max-width: 480px) {
             .notfound .notfound-404 {
-                height: 162px;
+                height: 180px;
             }
 
             .notfound .notfound-404 h1 {
@@ -119,6 +125,7 @@
             .notfound h2 {
                 font-size: 16px;
             }
+            
         }
     </style>
 
