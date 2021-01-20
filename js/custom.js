@@ -13,6 +13,19 @@ $(window).load(function () {
 $(document).ready(function () {
     "use strict";
 
+    $(document).ready(function () {
+        var userLang = navigator.language || navigator.userLanguage;
+        if (userLang == "en") {
+          window.location.href = "https://hoddinott.github.io"
+        }
+        else if (userLang == "it") {
+          window.location.href = "https://hoddinott.github.io/it"
+        }
+        else if (userLang == "de") {
+          window.location.href = "https://hoddinott.github.io/de"
+        }
+      });
+
     // scroll menu
     var sections = $('.section'),
         nav = $('.navbar-fixed-top,footer'),
