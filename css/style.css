@@ -67,7 +67,6 @@ h3 {
 
 h4 {
     font-family: 'Noto Sans JP', sans-serif;
-    text-transform: capitalize;
     letter-spacing: 2px;
     position: relative;
     color: var(--maintextcolor);
