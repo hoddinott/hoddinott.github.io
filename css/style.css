@@ -638,6 +638,7 @@ a[href^="mailto"]:hover {
 
 .social p {
     padding: 10px;
+    text-align: left;
 }
 
 .social li a {
