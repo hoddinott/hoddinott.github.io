@@ -1,5 +1,4 @@
 :root {
-    /* --maintextcolor: #425BB5; */
     --maintextcolor: rgb(28, 43, 70);
     --hovercolor: rgb(142, 142, 161)
 
@@ -637,16 +636,17 @@ a[href^="mailto"]:hover {
     text-align: left;
 }
 
-.social li a {
-    color: var(--maintextcolor);
-    font-size: 35px;
-    margin-right: 15px;
-    transition: all .2s;
-    -webkit-transition: all .2s;
+
+.social-icon {
+    width: 35px;
+    margin-right: 10px;
+    
 }
 
-.social li a:hover {
-    color: var(--hovercolor);
+.social-icon:hover path {
+    fill: var(--hovercolor);
+    transition: all .2s;
+    -webkit-transition: all .2s;
 }
 
 
