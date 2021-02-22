@@ -1,9 +1,6 @@
 :root {
     --maintextcolor: rgb(28, 43, 70);
     --hovercolor: rgb(142, 142, 161)
-
-    /* todo - make global padding variable? */
-    /* todo - make global section background vars? */
   }
 
 /*
