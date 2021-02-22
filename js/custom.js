@@ -75,7 +75,6 @@ $(document).ready(function () {
             if (newscroll > mypos && !up) {
                 $('.navbar-fixed-top').stop().fadeOut(150);
                 up = !up;
-                console.log(up);
             } else if (newscroll < mypos && up) {
                 $('.navbar-fixed-top').stop().fadeIn(150);
                 up = !up;
@@ -101,29 +100,4 @@ $(document).ready(function () {
         once: true,
         disable: 'mobile'
     });
-
-    //  isotope
-    $('#services').waitForImages(function () {
-        var $container = $('.portfolio_container');
-        $container.isotope({
-            filter: '*',
-        });
-
-        $('.portfolio_filter a').click(function () {
-            $('.portfolio_filter .active').removeClass('active');
-            $(this).addClass('active');
-
-            var selector = $(this).attr('data-filter');
-            $container.isotope({
-                filter: selector,
-                animationOptions: {
-                    duration: 500,
-                    animationEngine: "jquery"
-                }
-            });
-            return false;
-        });
-
-    });
-  
 });
