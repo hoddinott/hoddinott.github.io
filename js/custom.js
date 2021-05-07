@@ -84,7 +84,6 @@ $(document).ready(function () {
     });
 
 
-
     // Parallax
     var parallax = function () {
         $(window).stellar();
